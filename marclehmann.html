@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+    <title>Marc Lehmann</title>
+    <meta charset="utf-8">
+    <meta name="title" content="Marc Lehmann">        
+	<meta name="description" content="Marc Lehmann">
+	<meta name="keywords" content="Marc Lehmann" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- we don't want robots putting this in search results -->
+	
+	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+		
+	<!-- design -->
+
+	<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	
+	<style>
+		/* Stylesheet */
+
+		body {
+			font: normal 100% 'Roboto',sans-serif;
+			-webkit-font-smoothing: antialiased;
+			font-size:0.8125em; /* 13px */
+			text-align: left;
+			line-height:1.5em;
+			color: #6b6b6b;
+			margin:0px;
+			padding:0px;
+			width:100%;
+			height:100%;
+			}
+	
+		/* brand colours */	
+
+
+		.bg-orange {background-color:#ff850d;} /* R:255 G:133 B:13 */
+		.bg-red   {background-color:#ff0000;} /* R:255 G:0 G:0 */
+		.bg-black {background-color:#1b1b1b;} /* R:27 G:27 B:27 */
+		.bg-white {background-color:#ffffff;} /* R:255 G:255 B:255 */
+		.bg-grey3 {background-color:#6b6b6b;} /* R:107 G:107 B:107 */
+		.bg-grey4 {background-color:#979797;} /* R:151 G:151 B:151 */
+		.bg-grey5 {background-color:#c3c3c3;} /* R:195 G:195 B:195 */
+		.bg-grey6 {background-color:#f0f0f0;} /* R:240 G:240 B:240 */
+		.bg-grey7 {background-color:#fbfbfb;} /* R:251 G:251 B:251 */
+
+		.orange {color:#ff850d;} /* R:255 G:133 B:13 */
+		.red   {color:#ff0000;} /* R:255 G:0 G:0 */
+		.black {color:#1b1b1b;} /* R:27 G:27 B:27 */
+		.white {color:#ffffff;} /* R:255 G:255 B:255 */
+		.grey3 {color:#6b6b6b;} /* R:107 G:107 B:107 */
+		.grey4 {color:#979797;} /* R:151 G:151 B:151 */
+		.grey5 {color:#c3c3c3;} /* R:195 G:195 B:195 */
+		.grey6 {color:#f0f0f0;} /* R:240 G:240 B:240 */
+		.grey7 {color:#fbfbfb;} /* R:251 G:251 B:251 */
+
+
+		/* notifications */
+		.notification-error {background-color:#e4433a; color:#ffffff;} /* tomato */
+		.notification-success {background-color:#008000; color:#ffffff;} /* green */
+		.notification-important {background-color:#4e8bca; color:#ffffff;} /* stealblue */
+
+	
+		.title-wrapper {background:#f0f0f0;box-shadow:0px 0px 1px #c3c3c3;}
+		.sub-menu {width:100%; background:#f0f0f0;}
+	
+		h1, h2, h3, h4, .head1, .head2, .head3, .head4, lh {line-height:1.5em;}	
+		h1, h2, h3, h4 {display:block; color:#1b1b1b;}	
+		h1, .head1 {font-size:3.0em; font-weight:200;} /* 48px light */
+		h2, .head2 {font-size:2.0em; font-weight:200;} /* 32px light */
+		h3, .head3 {font-size:1.5em; font-weight:200;} /* 24px normal */
+		h4, .head4 {font-size:1.0em; font-weight:600;} /* 16px slightly bold */
+
+		p {
+			line-height:1.5em; 
+			display:block;
+			-webkit-font-smoothing: antialiased;
+			text-rendering: optimizeLegibility;
+			}	
+	
+		a {
+			color:#f08a37; 
+			cursor:pointer;
+			}
+	
+		hr {
+			border-top:solid 1px #f2f2f2;
+			border-right:none;
+			border-bottom:none;
+			border-left:none;
+			margin-top:24px;
+			}
+
+	
+		/* equal height flexible divs */
+
+		.flexbox {      
+			display: -webkit-flex;        
+			display: -ms-flexbox;     
+			display: flex;
+			overflow: hidden;
+			flex-wrap:wrap;
+			}
+		.flexbox .col {
+			flex-basis: auto;
+			flex-grow:1;
+			padding: 48px;
+			width:240px;
+			}
+	
+		.flexbox .col-narrow {
+			flex-basis: auto;
+			flex-grow:1;
+			padding: 48px;
+			width:160px;
+			}
+	
+		.flexcell {      
+			display: -webkit-flex;        
+			display: -ms-flexbox;     
+			display: flex;
+			overflow: hidden;
+			flex-wrap:wrap;
+			}
+		.flexcell .col {
+			flex-basis: auto;
+			flex-grow:1;
+			padding: 4px 8px;
+			vertical-align:center;
+			}
+	
+	
+		.flexbox .colvar {
+				flex:1;
+				padding:8px;
+				vertical-align:center;
+				}
+
+		.inverse {color:#ffffff; /*text-shadow:2px 2px 30px #000000;*/}
+		a.inverse {color:#fff;}
+		a, p.inverse a {color:#ff850d; text-decoration: none;}
+		
+		select {
+			font: normal 100% 'Roboto',sans-serif;
+			line-height:1.2em;
+			padding:0px 32px 0px 0px;
+			margin:0px;
+			border:0px;
+			-webkit-appearance: none;
+		    border-radius: 0;
+		    background: url('/images/picklist-down-arrow.png') no-repeat 100% 50%;
+		}
+			
+		.cell {
+			line-height:1.2em; 
+			padding:4px 8px; 
+			margin-right:8px;
+			margin-top:8px; 
+			border:solid 1px #eee;
+			border-radius:4px;
+		}	
+		.info {
+			line-height:1.2em; 
+			padding:4px 8px; 
+			margin-right:8px;
+			margin-top:8px; 
+		}
+			
+		.data {
+			line-height:1.2em;
+			color:#1b1b1b !important;
+			}
+			
+		.sumandnotes {width:580px;}
+		
+		@media only screen and (max-width: 580px) {
+				.sumandnotes {width:320px;}
+				}
+
+	
+		/* Buttons */		
+		a.button, .button {
+			line-height:1.5em;
+			display:inline-block;
+			padding: 0.5em 1em;
+			vertical-align:middle;
+			text-transform:uppercase;
+			border-radius:4px;
+			margin:4px;
+		}	
+
+
+		.left {float:left;}
+		.right {float:right;}
+
+
+		/* Clean Printing */
+
+		@media print {.break {page-break-before: always; padding-top:48px;}}
+		@media print {.dontprint {display: none;}}		
+
+
+
+		.mobile-on {display:none;}
+		.mobile-off {display:block;}
+		@media only screen and (max-width: 900px) {
+			.mobile-off {display:none;} 
+			.mobile-on {display:block;}
+			}
+		@media screen and (max-device-width: 640px) {
+			body {-webkit-text-size-adjust: none;}
+			}
+	
+
+
+		.picker:active, .picker:hover, .field:active, .field:hover {outline-color: none;}
+		.material-icons, .material-icons-outlined {font-size:20px; vertical-align:middle;}
+	
+		.tab-off {float:left; margin:0px 0px 0px 24px; padding:15px 0px 11px 0px;}
+		.tab-on {float:left; margin:0px 0px 0px 24px; padding:15px 0px 11px 0px; border-bottom: solid 4px #ff850d;color:#ff805d;}
+		
+		.option-on, .option {padding:8px; margin:0px 0px 8px 0px; padding:4px 8px;}
+		.option-on {color:#ff805d;border-left: solid 4px #ff850d;}
+		.option {border-left: solid 4px #ffffff;}
+		
+		</style>	
+</head>
+
+<body>	
+	
+	Test - Marc Lehmann
+	
+
+  </body>
+</html>
